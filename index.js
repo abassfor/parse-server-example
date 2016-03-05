@@ -13,8 +13,9 @@ if (!databaseUri) {
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'tSAUWWTxFbQdf00ljtMmANE3JCLCJAUEEI5EBctl',
+  masterKey: process.env.MASTER_KEY || 'e5oYzp1t3BxI3C6RgjnodVKWiqkSd9CTXmr5NlhF', //Add your master key here. Keep it secret!
+  clientKey: 'fwkx5EMCD4iu2yQEhuUZo4UHjBMwN3j5QcLjuKbt',
   serverURL: process.env.SERVER_URL || 'http://localhost:1337'  // Don't forget to change to https if needed
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
