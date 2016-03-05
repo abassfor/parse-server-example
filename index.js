@@ -16,6 +16,7 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'tSAUWWTxFbQdf00ljtMmANE3JCLCJAUEEI5EBctl',
   masterKey: process.env.MASTER_KEY || 'e5oYzp1t3BxI3C6RgjnodVKWiqkSd9CTXmr5NlhF', //Add your master key here. Keep it secret!
   clientKey: 'fwkx5EMCD4iu2yQEhuUZo4UHjBMwN3j5QcLjuKbt',
+  fileKey: 'fefb9bda-b2b4-4bd9-a8f2-fa528170ef62',
   serverURL: process.env.SERVER_URL || 'http://localhost:1337'  // Don't forget to change to https if needed
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
