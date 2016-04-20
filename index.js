@@ -11,7 +11,7 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://pxc:painXchange123@ds023428.mlab.com:23428/painxchange',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'tSAUWWTxFbQdf00ljtMmANE3JCLCJAUEEI5EBctl',
   masterKey: process.env.MASTER_KEY || 'e5oYzp1t3BxI3C6RgjnodVKWiqkSd9CTXmr5NlhF', //Add your master key here. Keep it secret!
