@@ -19,8 +19,8 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || 'e5oYzp1t3BxI3C6RgjnodVKWiqkSd9CTXmr5NlhF', //Add your master key here. Keep it secret!
   clientKey: 'fwkx5EMCD4iu2yQEhuUZo4UHjBMwN3j5QcLjuKbt',
   fileKey: 'fefb9bda-b2b4-4bd9-a8f2-fa528170ef62',
-  serverURL: process.env.SERVER_URL || 'http://pacific-lowlands-64465.herokuapp.com'  // Don't forget to change to https if needed
-  publicServerURL: 'http://pacific-lowlands-64465.herokuapp.com'
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337'  // Don't forget to change to https if needed
+  publicServerURL: 'https://pacific-lowlands-64465.herokuapp.com'
   filesAdapter: new S3Adapter(
     "AKIAJR5A4DJSE4CUUY6Q",
     "O3pwpE+pyGgvLAuR/LB5yteKDxZEuiNFJJJ9rLeo",
