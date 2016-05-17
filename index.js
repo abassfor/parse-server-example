@@ -10,6 +10,8 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+var S3Adapter = require('parse-server').S3Adapter;
+
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://pxc:painXchange123@ds023428.mlab.com:23428/painxchange',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
@@ -18,7 +20,14 @@ var api = new ParseServer({
   clientKey: 'fwkx5EMCD4iu2yQEhuUZo4UHjBMwN3j5QcLjuKbt',
   fileKey: 'fefb9bda-b2b4-4bd9-a8f2-fa528170ef62',
   serverURL: process.env.SERVER_URL || 'http://localhost:1337'  // Don't forget to change to https if needed
-  facebookAppIds: ['355436981293305']
+  publicServerURL: 'http://pacific-lowlands-64465.herokuapp.com'
+  filesAdapter: new S3Adapter(
+    "AKIAJR5A4DJSE4CUUY6Q",
+    "O3pwpE+pyGgvLAuR/LB5yteKDxZEuiNFJJJ9rLeo",
+    "painxchange",
+    {directAccess: true}
+  )
+  // facebookAppIds: ['355436981293305']
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
