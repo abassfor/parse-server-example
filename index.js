@@ -21,9 +21,9 @@ var api = new ParseServer({
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   // publicServerURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   filesAdapter: new S3Adapter(
-    "AKIAJR5A4DJSE4CUUY6Q",
-    "O3pwpE+pyGgvLAuR/LB5yteKDxZEuiNFJJJ9rLeo",
-    "painxchange",
+    process.env.S3_KEY_ID,
+    process.env.S3_SECRET_KEY,
+    process.env.S3_BUCKET_ID,
     {directAccess: true}
   ),
   liveQuery: {
