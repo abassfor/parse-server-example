@@ -14,7 +14,7 @@ if (!databaseUri) {
 var S3Adapter = require('parse-server').S3Adapter;
 
 var api = new ParseServer({
-  databaseURI: process.env.DATABASE_URI || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
@@ -48,7 +48,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('Make sure to star the parse-server repo on GitHub! testing');
+  res.status(200).send('Make sure to star the parse-server repo on GitHub!!');
 });
 
 // There will be a test page available on the /test path of your server url
